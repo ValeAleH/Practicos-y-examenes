@@ -1,7 +1,8 @@
 Algoritmo ExamenPractico
 	Definir nombre, cargo, mes Como Caracter
 	Definir CI, sueldo, antiguedad, horas, haberBasico, salariominimo Como Entero
-	Definir bono, ingresos, egresos, descuento, liquido, valorant, afp Como Real
+	Definir bono, ingresos, egresos, descuento, liquido, valorant, afp, horasex Como Real
+	Definir HE Como Logico
 	Escribir "Bienvenido al programa para ver tu boleta de pago"
 	Escribir "Por favor ingresa los datos que se requieren a continuación"
 	Escribir "Ingrese su primer nombre"
@@ -10,7 +11,7 @@ Algoritmo ExamenPractico
 	Leer cargo
 	Escribir "Ingrese su numero de carnet"
 	Leer CI
-	Escribir "Ingrese su sueldo y las horas trabajadas al mes   que tiene"
+	Escribir "Ingrese su sueldo y las horas trabajadas al mes que tiene sin contar horas extras"
 	Leer sueldo
 	Leer horas
 	Escribir "Ingrese el mes del cual desea saber su boleta"
@@ -50,17 +51,29 @@ Algoritmo ExamenPractico
 			Fin Si
 		Fin Si
 	Fin Si
+	horasex= sueldo/horas
+	Escribir "Trabajo horas extras este mes? Escriba Verdadero o Falso"
+	Leer HE
+	Si HE=Verdadero Entonces
+		Escribir 
+	SiNo
+		acciones_por_falso
+	Fin Si
+	
+	
+	
+	
 	bono=(salariominimo*3)*valorant
 	ingresos= sueldo+bono
 	afp=0.1271
 	descuento= haberBasico*afp
 	egresos=descuento
 	liquido=ingresos-egresos
-	Escribir cargo, nombre,  "con número de carnet" , CI ,"tu boleta de pagos del mes de" ,mes ,"es de:"
+	Escribir cargo, "_" nombre,  "_con número de carnet_" , CI ,"_tu boleta de pagos del mes de_" ,mes ,"_es de:"
 	Escribir "Haber Basico=" ,sueldo
 	Escribir "Total de ingresos=", ingresos 
 	Escribir "Total de egresos=" , egresos 
 	Escribir "Liquido pagable=" , liquido
 	Escribir "Gracias y hasta luego"
+	
 FinAlgoritmo
-
