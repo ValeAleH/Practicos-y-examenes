@@ -1,0 +1,3 @@
+Algoritmo CompraDeEmpresa
+	Definir 
+FinAlgoritmo
